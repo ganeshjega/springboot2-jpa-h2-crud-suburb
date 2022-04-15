@@ -1,0 +1,149 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpringBoot-H2",
+		"_postman_id": "9abed00a-e104-41ff-acbc-4500048c601b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AllEmployees",
+			"request": {
+				"url": "http://localhost:8080/api/v1/employees",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "AllSuburbs",
+			"request": {
+				"url": "http://localhost:8080/api/v1/suburbs",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SuburbsBetween",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/v1/suburbsBetween?from=600017&to=600100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"suburbsBetween"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "600017",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "to",
+							"value": "600100",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "EmployeeCreate",
+			"request": {
+				"url": "http://localhost:8080/api/v1/employees",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"Arumugam\",\n\t\"lastName\" : \"Sundaram\",\n\t\"emailId\" : \"arumugam.sundaram@hp.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SuburbCreate",
+			"request": {
+				"url": "http://localhost:8080/api/v1/suburbs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Perungudi\",\n\t\"postalCode\" : \"600096\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SuburbBulkCreate",
+			"request": {
+				"url": "http://localhost:8080/api/v1/suburbs/bulk",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"T.Nagar\",\n        \"postalCode\": 600017\n    },\n    {\n        \"name\": \"Velachery\",\n        \"postalCode\": 600042\n    },\n    {\n        \"name\": \"Pallikaranai\",\n        \"postalCode\": 600100\n    },\n    {\n        \"name\": \"Perungudi\",\n        \"postalCode\": 600096\n    }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
